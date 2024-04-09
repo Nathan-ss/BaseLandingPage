@@ -1,77 +1,132 @@
+import { useEffect, useState } from "react";
 import { Services } from "./services";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
-export const Entry = () => {
+const variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
+
+const texts = ["Procura um seguro saúde?", "Pensou em seguro vida?", "Seu pet sempre seguro!", "Precisa seguro automotivo?"];
+
+const TextChanger = (): JSX.Element => {
+  const [index, setIndex] = useState(0);
+
+  const changeText = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeText();
+    }, 10000); // 1 minuto em milissegundos
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <AnimatePresence>
+      <motion.h1
+        key={index}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none"
+      >
+        {texts[index]}
+      </motion.h1>
+    </AnimatePresence>
+  );
+};
+export const Entry = (): JSX.Element => {
   return (
     <div className=" pt-20">
-      <div
-        className=" overflow-hidden bg-gradient-to-r 
-                from-blue-900 
-                to-slate-800 
-                via-indigo-900
-"
-      >
-        <div className=" px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className=" max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
-              <span className="relative inline-block">
-                <svg viewBox="0 0 52 24" fill="currentColor" className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-400 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                  <defs>
-                    <pattern id="dc223fcc-6d72-4ebc-b4ef-abe121034d6e" x="0" y="0" width=".135" height=".30">
-                      <circle cx="1" cy="1" r=".7" />
-                    </pattern>
-                  </defs>
-                  <rect fill="url(#dc223fcc-6d72-4ebc-b4ef-abe121034d6e)" width="52" height="24" />
-                </svg>
-                <span className="relative">Um</span>
-              </span>{" "}
-              escritório com mentalidade humanizada
-            </h2>
-            <p className="text-base text-gray-300 md:text-lg">
-              Os advogados da <strong>Geniüs</strong> Advocacia são autoridades no que você precisa, prontos para guiá-lo através de um atendimento prático, rápido e objetivo. Consulte agora enquanto
-              é tempo!
-            </p>
-          </div>
-          <div className="flex items-center sm:justify-center">
-            <a
-              href="https://wa.me/5511912882728?text=Ol%C3%A1+gostaria+de+uma+ajuda+com+uma+determinada+situa%C3%A7%C3%A3o"
-              target="_blank"
-              className="relative px-5 py-2 font-medium text-white group"
-              rel="noreferrer"
-            >
-              <span
-                className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-Primary
- group-hover:bg-Primary
- group-hover:skew-x-12"
-              ></span>
-              <span
-                className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-gradient-to-r 
-from-PrimaryLight
-to-yellow-600
- group-hover:bg-Primary
- group-hover:-skew-x-12"
-              ></span>
-              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
-              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
-              <span className="relative flex gap-2 fill-white hover:fill-green-300 ">
-                Agendar Agora{" "}
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" className="">
-                  <path d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"></path>
-                </svg>
-              </span>
-            </a>
+      <div className="relative">
+        <img src="https://ransomseguros.com.br/wp-content/uploads/2020/11/WhatsApp-Image-2020-04-22-at-10.03.03-1-1024x682.jpeg" className="absolute inset-0 object-cover w-full h-full" alt="" />
+
+        <div className="relative bg-opacity-75 bg-gray-900">
+          <svg className="absolute inset-x-0 bottom-0 text-white" viewBox="0 0 1160 162">
+            <path
+              fill="currentColor"
+              d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
+            />
+          </svg>
+          <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="flex flex-col items-center justify-between xl:flex-row">
+              <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                <TextChanger />
+                <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+                  A vida é o que importa <br /> Esteja preparado para momentos difíceis{" "}
+                </p>
+                <Link href="/" aria-label="" className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-zinc-50 hover:text-teal-accent-700">
+                  Saiba mais
+                  <svg className="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
+                <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
+                  <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">Entre em contato</h3>
+
+                  <form>
+                    <div className="mb-1 sm:mb-2">
+                      <label htmlFor="firstName" className="inline-block mb-1 font-medium">
+                        First name
+                      </label>
+                      <input
+                        placeholder="John"
+                        required
+                        type="text"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="firstName"
+                        name="firstName"
+                      />
+                    </div>
+                    <div className="mb-1 sm:mb-2">
+                      <label htmlFor="lastName" className="inline-block mb-1 font-medium">
+                        Last name
+                      </label>
+                      <input
+                        placeholder="Doe"
+                        required
+                        type="text"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="lastName"
+                        name="lastName"
+                      />
+                    </div>
+                    <div className="mb-1 sm:mb-2">
+                      <label htmlFor="email" className="inline-block mb-1 font-medium">
+                        E-mail
+                      </label>
+                      <input
+                        placeholder="john.doe@example.org"
+                        required
+                        type="text"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="email"
+                        name="email"
+                      />
+                    </div>
+                    <div className="mt-4 mb-2 sm:mb-4">
+                      <button
+                        type="submit"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                    <p className="text-xs text-gray-600 sm:text-sm">Nós respeitamos sua privacidade. Cancele a inscrição a qualquer momento.</p>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="relative px-4 sm:px-0">
-        <div
-          className="absolute inset-0  bg-gradient-to-r 
-from-blue-900 
-to-slate-800 
-via-indigo-900
-animate-gradient-x h-1/2"
-        />
-
-        <Services />
       </div>
     </div>
   );

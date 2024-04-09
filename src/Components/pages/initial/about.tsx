@@ -5,11 +5,7 @@ export const About = () => {
     { name: "Horas por dia", value: "24" },
   ];
   return (
-    <div
-      className="relative isolate overflow-hidden bg-gradient-to-t
-    from-white
- pt-2 pb-12"
-    >
+    <div>
       <div className="mx-auto max-w-7xl px-6 w-full">
         <div className="mx-auto max-w-7xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">Sobre nós</h2>

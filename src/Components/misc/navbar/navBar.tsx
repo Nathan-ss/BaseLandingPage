@@ -18,35 +18,20 @@ const NavBar = () => {
   return (
     <div className="fixed z-50 w-full ">
       <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="menu border-b  flex md:items-center px-12 bg-white justify-between pb-0 p-4 shadow-lg md:pb-4 w-full">
-        <div className="flex items-center justify-between mb-4  md:mb-0">
-          <a className="flex justify-start w-2/3 gap-2 h-16 no-underline text-grey-darkest  hover:text-black" href="#">
-            <img src="./images/lgi.png" alt="" className=" h-full flex object-contain" />
-            <img src="./images/txlg.png" alt="" className=" h-full flex object-contain p-2" />
+        <div className="flex gap-2 items-center w-1/3">
+          <a className="flex justify-start  gap-2 h-16 no-underline text-grey-darkest  hover:text-black" href="#">
+            <img src="./images/logo sf dg.png" alt="" className=" h-full flex object-contain" />
           </a>
-
-          <a className="text-black hover:text-orange md:hidden font-bold" href="#">
-            <i className="fa fa-2x fa-bars"></i>
-          </a>
+          <h1 className="  text-xl text-gray-800 font-bold">Visual corretora</h1>
         </div>
-        <nav className="hidden lg:flex  md:grid">
-          <ul className="list-reset md:flex md:items-center">
-            <li className="md:ml-4">
-              <a className="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-                Products
-              </a>
-            </li>
-            <li className="md:ml-4">
-              <a className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-                About
-              </a>
-            </li>
-            <li className="md:ml-4">
-              <a className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-                Contact
-              </a>
-            </li>
+        <div className=" hidden  lg:flex items-center ">
+          <ul className="flex items-center space-x-6">
+            <li className="font-semibold text-gray-700">Home</li>
+            <li className="font-semibold text-gray-700">Articles</li>
+            <li></li>
           </ul>
-        </nav>
+        </div>
+
         <div className="flex md:hidden lg:hidden">
           <motion.button whileTap={{ scale: 0.97 }} onClick={() => setIsOpen(!isOpen)} id="button">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -55,7 +40,7 @@ const NavBar = () => {
           </motion.button>
         </div>
       </motion.nav>
-      <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="flex md:hidden menu  w-full m-0">
+      <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className=" md:hidden menu  w-full m-0">
         <motion.ul
           id="ul"
           variants={{
