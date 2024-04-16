@@ -5,34 +5,59 @@ export const About = () => {
     { name: "Horas por dia", value: "24" },
   ];
   return (
-    <div>
-      <div className="mx-auto max-w-7xl px-6 w-full">
-        <div className="mx-auto max-w-7xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">Sobre nós</h2>
-          <p className="mt-6 text-lg leading-8 text-black">
-            Criada para que você evite problemas futuros com o judiciário, ou, quando já criado, possa te oferecer o mais amplo e eficaz quadro da advocacia moderna, voltada a garantir toda a defesa
-            de nossos clientes.
-          </p>
-          <p className="mt-4 text-lg leading-8 text-black">
-            A Assessoria Jurídica Administrativa da GENIUS.ADV pode orientar e ajudar você a não cair nas garras dos Tribunais, onde as ações de alongam por muitos anos.
-          </p>
-          <p className="mt-4 text-lg leading-8 text-black">Os profissionais estarão à sua disposição, em uma consulta por videoconferência, com a duração de até 40 minutos, todas individualizadas.</p>
-          <p className="mt-4 text-lg leading-8 text-black">
-            Você terá tempo para tirar todas as suas dúvidas que atrapalham o seu desenvolvimento profissional e emocional, pois temos a plena consciência das muitas dificuldades em entender as várias
-            faces do Direito.
-          </p>
+    <div id="about">
+      <section className="bg-white dark:bg-white">
+        <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+          <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-black">
+              Da Saúde à Tranquilidade Completa
+            </h2>
+            <p className="mb-4">
+              Nossa empresa nasceu com um sonho: oferecer planos de saúde
+              acessíveis e de qualidade para todos. Começamos pequenos, mas com
+              um grande compromisso com nossos clientes. Ao longo dos anos,
+              crescemos e nos tornamos uma referência no mercado, expandindo
+              nossa atuação para outros segmentos e oferecendo soluções
+              completas para a sua tranquilidade.
+            </p>
+            <p>
+              Queremos oferecer soluções completas em planos de saúde, seguros e
+              outros serviços, com foco na tranquilidade e no bem-estar de
+              nossos clientes.
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center mt-5 text-gray-200 bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900"
+            >
+              Entre em contato com um de nossos atendentes
+              <svg
+                className="ml-2 -mr-1 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mt-8">
+            <img
+              className="w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+              alt="office content 1"
+            />
+            <img
+              className="mt-4 w-full lg:mt-10 rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+              alt="office content 2"
+            />
+          </div>
         </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse">
-                <dt className="text-base leading-7 text-black">{stat.name}</dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-black">{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

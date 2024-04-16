@@ -1,7 +1,8 @@
 export const Footer = () => {
   return (
     <div
-      className="relative mt-16 bg-deep-purple-accent-400 bg-gradient-to-b
+      id="contact"
+      className=" bg-deep-purple-accent-400 bg-gradient-to-b
                 from-blue-900 
                 to-slate-800 
                 via-indigo-900 text-white"
@@ -17,101 +18,164 @@ export const Footer = () => {
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
-            <a className="flex justify-start w-2/3 gap-2 h-16 no-underline text-grey-darkest  hover:text-black" href="#">
-              <img src="./images/lgi.png" alt="" className=" h-full flex object-contain" />
-              <img src="./images/txlg.png" alt="" className=" h-full flex object-contain p-2" />
+            <a
+              className="flex justify-start w-2/3 gap-2 h-16 no-underline text-grey-darkest  hover:text-black"
+              href="#"
+            >
+              <img
+                src="./images/lgi.png"
+                alt=""
+                className=" h-full flex object-contain"
+              />
+              <img
+                src="./images/txlg.png"
+                alt=""
+                className=" h-full flex object-contain p-2"
+              />
             </a>
 
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-deep-purple-50">
-                Nosso entendimento é que o direito é uma ciencia social que visa resolver e estabelecer uma harmonia igualitária entre as pessoas, através de regras de convivência assegurando direitos
-                e obrigações por meio de leis e afins.
+                Nosso entendimento é que o direito é uma ciencia social que visa
+                resolver e estabelecer uma harmonia igualitária entre as
+                pessoas, através de regras de convivência assegurando direitos e
+                obrigações por meio de leis e afins.
               </p>
               <p className="mt-4 text-sm text-deep-purple-50">
-                Um dos meios eficazes da pessoa evitar o prejuízo financeiro; o mal social e psicológico é buscando o aconselhamento de um advogado(a) antes de qualquer iniciativa (comprar, vender,
-                alugar, consignar, afiançar, permutar, contratar, divorciar, conviver, etc); evitando, assim, grandes prejuízos financeiros, afetivos e morais.
+                Um dos meios eficazes da pessoa evitar o prejuízo financeiro; o
+                mal social e psicológico é buscando o aconselhamento de um
+                advogado(a) antes de qualquer iniciativa (comprar, vender,
+                alugar, consignar, afiançar, permutar, contratar, divorciar,
+                conviver, etc); evitando, assim, grandes prejuízos financeiros,
+                afetivos e morais.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">Category</p>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Category
+              </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">News</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    News
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">World</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    World
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Games</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Games
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">References</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    References
+                  </a>
                 </li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">Cherry</p>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Cherry
+              </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Web</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Web
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">eCommerce</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    eCommerce
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Business</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Business
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Entertainment</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Entertainment
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Portfolio</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Portfolio
+                  </a>
                 </li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">Apples</p>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Apples
+              </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Media</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Media
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Brochure</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Brochure
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Nonprofit</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Nonprofit
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educational</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Educational
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Projects</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Projects
+                  </a>
                 </li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">Business</p>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Business
+              </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Infopreneur</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Infopreneur
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Personal</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Personal
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Wiki</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Wiki
+                  </a>
                 </li>
                 <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Forum</a>
+                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
+                    Forum
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          <p className="text-sm text-gray-100">© Copyright 2020 Lorem Inc. All rights reserved.</p>
+          <p className="text-sm text-gray-100">
+            © Copyright 2020 Lorem Inc. All rights reserved.
+          </p>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0">
             <a className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">

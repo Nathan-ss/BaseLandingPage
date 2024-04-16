@@ -17,30 +17,85 @@ const NavBar = () => {
 
   return (
     <div className="fixed z-50 w-full ">
-      <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className="menu border-b  flex md:items-center px-12 bg-white justify-between pb-0 p-4 shadow-lg md:pb-4 w-full">
+      <motion.nav
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        className="menu border-b  flex md:items-center px-12 bg-white justify-between pb-0 p-4 shadow-lg md:pb-4 w-full"
+      >
         <div className="flex gap-2 items-center w-1/3">
-          <a className="flex justify-start  gap-2 h-16 no-underline text-grey-darkest  hover:text-black" href="#">
-            <img src="./images/logo sf dg.png" alt="" className=" h-full flex object-contain" />
+          <a
+            className="flex justify-start  gap-2 h-16 no-underline text-grey-darkest  hover:text-black"
+            href="#"
+          >
+            <img
+              src="./images/logo sf dg.png"
+              alt=""
+              className=" h-full flex object-contain"
+            />
           </a>
-          <h1 className="  text-xl text-gray-800 font-bold">Visual corretora</h1>
+          <h1 className="  text-xl text-gray-800 font-bold">
+            Visual corretora
+          </h1>
         </div>
         <div className=" hidden  lg:flex items-center ">
           <ul className="flex items-center space-x-6">
-            <li className="font-semibold text-gray-700">Home</li>
-            <li className="font-semibold text-gray-700">Articles</li>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#home"
+            >
+              Home
+            </a>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#about"
+            >
+              Sobre
+            </a>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#plan"
+            >
+              Planos
+            </a>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#yourplan"
+            >
+              Escolha plano
+            </a>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#contact"
+            >
+              Contato
+            </a>
             <li></li>
           </ul>
         </div>
 
         <div className="flex md:hidden lg:hidden">
-          <motion.button whileTap={{ scale: 0.97 }} onClick={() => setIsOpen(!isOpen)} id="button">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => setIsOpen(!isOpen)}
+            id="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
               <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </motion.button>
         </div>
       </motion.nav>
-      <motion.nav initial={false} animate={isOpen ? "open" : "closed"} className=" md:hidden menu  w-full m-0">
+      <motion.nav
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        className=" md:hidden menu  w-full m-0"
+      >
         <motion.ul
           id="ul"
           variants={{
