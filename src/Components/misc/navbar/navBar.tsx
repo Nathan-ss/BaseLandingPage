@@ -34,7 +34,7 @@ const NavBar = () => {
             />
           </a>
           <h1 className="  text-xl text-gray-800 font-bold">
-            Visual corretora
+            Visual ABCSP corretora de Seguros
           </h1>
         </div>
         <div className=" hidden  lg:flex items-center ">
