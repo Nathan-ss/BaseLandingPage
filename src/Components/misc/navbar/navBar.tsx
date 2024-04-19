@@ -22,7 +22,7 @@ const NavBar = () => {
         animate={isOpen ? "open" : "closed"}
         className="menu border-b  flex md:items-center px-12 bg-white justify-between pb-0 p-4 shadow-lg md:pb-4 w-full"
       >
-        <div className="flex gap-2 items-center w-1/3">
+        <div className="flex gap-2 items-center w-2/3">
           <a
             className="flex justify-start  gap-2 h-16 no-underline text-grey-darkest  hover:text-black"
             href="#"
@@ -33,7 +33,7 @@ const NavBar = () => {
               className=" h-full flex object-contain"
             />
           </a>
-          <h1 className="  text-xl text-gray-800 font-bold">
+          <h1 className=" text-sm lg:text-xl text-gray-800 font-bold">
             Visual ABCSP corretora de Seguros
           </h1>
         </div>
@@ -123,13 +123,44 @@ const NavBar = () => {
           style={{ pointerEvents: isOpen ? "auto" : "none" }}
         >
           <motion.li id="li" variants={itemVariants}>
-            Item 1{" "}
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#home"
+            >
+              Home
+            </a>
           </motion.li>
           <motion.li id="li" variants={itemVariants}>
-            Item 2{" "}
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#about"
+            >
+              Sobre
+            </a>
           </motion.li>
           <motion.li id="li" variants={itemVariants}>
-            Item 3{" "}
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#plan"
+            >
+              Planos
+            </a>
+          </motion.li>
+          <motion.li id="li" variants={itemVariants}>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#yourplan"
+            >
+              Escolha plano
+            </a>
+          </motion.li>
+          <motion.li id="li" variants={itemVariants}>
+            <a
+              className="font-semibold text-gray-700 cursor-pointer hover:text-amber-500"
+              href="#contact"
+            >
+              Contato
+            </a>
           </motion.li>
         </motion.ul>
       </motion.nav>

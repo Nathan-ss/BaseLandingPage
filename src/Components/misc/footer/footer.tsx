@@ -28,7 +28,7 @@ export const Footer = () => {
               />
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 row-gap-8 lg:col-span-6 md:grid-cols-3">
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
                 Emails de contato
