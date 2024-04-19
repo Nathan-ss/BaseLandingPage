@@ -3,9 +3,8 @@ export const Footer = () => {
     <div
       id="contact"
       className=" bg-deep-purple-accent-400 bg-gradient-to-b
-                from-blue-900 
-                to-slate-800 
-                via-indigo-900 text-white"
+                text-white"
+      style={{ backgroundColor: "rgb(41,44,147)" }}
     >
       <svg
         className="absolute top-0 fill-blue-900 
@@ -16,156 +15,62 @@ export const Footer = () => {
         <path d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z" />
       </svg>
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+        <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-8">
           <div className="md:max-w-md lg:col-span-2">
             <a
               className="flex justify-start w-2/3 gap-2 h-16 no-underline text-grey-darkest  hover:text-black"
               href="#"
             >
               <img
-                src="./images/lgi.png"
+                src="./images/logo sf dg.png"
                 alt=""
                 className=" h-full flex object-contain"
               />
-              <img
-                src="./images/txlg.png"
-                alt=""
-                className=" h-full flex object-contain p-2"
-              />
             </a>
-
-            <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-deep-purple-50">
-                Nosso entendimento é que o direito é uma ciencia social que visa
-                resolver e estabelecer uma harmonia igualitária entre as
-                pessoas, através de regras de convivência assegurando direitos e
-                obrigações por meio de leis e afins.
-              </p>
-              <p className="mt-4 text-sm text-deep-purple-50">
-                Um dos meios eficazes da pessoa evitar o prejuízo financeiro; o
-                mal social e psicológico é buscando o aconselhamento de um
-                advogado(a) antes de qualquer iniciativa (comprar, vender,
-                alugar, consignar, afiançar, permutar, contratar, divorciar,
-                conviver, etc); evitando, assim, grandes prejuízos financeiros,
-                afetivos e morais.
-              </p>
-            </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-6 md:grid-cols-3">
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Category
+                Emails de contato
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    News
+                    visualabcsp@gmail.com
                   </a>
                 </li>
                 <li>
                   <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    World
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Games
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    References
+                    monicaCorretora.vendas@hotmail.com
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Cherry
+                Contato
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Web
+                    +55 (11) 98392-2949
                   </a>
                 </li>
                 <li>
                   <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    eCommerce
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Portfolio
+                    +55 (11) 99126-7342
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Apples
+                Local
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
                     Media
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Brochure
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Nonprofit
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Educational
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Business
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Infopreneur
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Personal
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Wiki
-                  </a>
-                </li>
-                <li>
-                  <a className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">
-                    Forum
                   </a>
                 </li>
               </ul>

@@ -1,12 +1,17 @@
+import { useHashStore } from "@/utils/hash";
+
 export const Plans = ({
   title,
   description,
   values,
+  hash,
 }: {
   title: string;
   description: string;
   values: string[];
+  hash: string;
 }) => {
+  const { setHashValue } = useHashStore();
   return (
     <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-blue-900 bg-white rounded-lg border border-amber-100 shadow dark:border-amber-600 xl:p-8 dark:bg-slate-900 dark:text-white">
       <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
@@ -37,10 +42,13 @@ export const Plans = ({
         })}
       </ul>
       <a
-        href="#"
+        href={`#home`}
+        onClick={() => {
+          setHashValue(hash);
+        }}
         className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
       >
-        Get started
+        Escolher
       </a>
     </div>
   );

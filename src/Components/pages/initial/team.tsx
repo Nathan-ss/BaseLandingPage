@@ -20,6 +20,7 @@ export const Team = () => {
               "Rede credenciada de qualidade",
               "Acesso a exames e procedimentos",
             ]}
+            hash={"saude"}
           />
 
           <Plans
@@ -32,6 +33,7 @@ export const Team = () => {
               "Cobertura para emergências",
               "Opções de hospedagem e cuidados",
             ]}
+            hash={"pet"}
           />
 
           <Plans
@@ -44,6 +46,7 @@ export const Team = () => {
               "Cobertura personalizada",
               "Rede de parceiros confiáveis",
             ]}
+            hash={"seguros"}
           />
 
           <Plans
@@ -56,6 +59,7 @@ export const Team = () => {
               "Rede de clínicas renomadas",
               "Assistência odontológica de qualidade",
             ]}
+            hash={"odonto"}
           />
         </div>
       </div>
