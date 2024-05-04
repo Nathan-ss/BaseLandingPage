@@ -4,8 +4,8 @@ export const FabBtn = () => {
       href="https://wa.me/5511983922949?text=Ol%C3%A1%2C+gostaria+de+fazer+um+plano+de+sa%C3%BAde"
       target="_blank"
       className="fixed z-50 items-end justify-end p-4 cursor-pointer bg-gradient-to-r 
-    from-PrimaryLight
-    to-yellow-600 hover:from-gray-300 hover:to-gray-200 rounded-full fill-white hover:fill-green-500 right-0 bottom-0 m-5 overflow-hidden transition duration-300 hover:scale-105 group hover:shadow-xl"
+    from-sky-800
+    to-blue-200 hover:from-gray-300 hover:to-gray-200 rounded-full fill-white hover:fill-green-500 right-0 bottom-0 m-5 overflow-hidden transition duration-300 hover:scale-105 group hover:shadow-xl"
       rel="noreferrer"
     >
       <svg

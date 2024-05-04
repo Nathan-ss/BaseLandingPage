@@ -63,7 +63,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
                 Local
               </p>
@@ -74,7 +74,7 @@ export const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">

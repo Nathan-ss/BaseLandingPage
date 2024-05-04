@@ -20,7 +20,7 @@ const NavBar = () => {
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="menu border-b  flex md:items-center px-12 bg-white justify-between pb-0 p-4 shadow-lg md:pb-4 w-full"
+        className="menu border-b  flex md:items-center px-12 bg-slate-300 justify-between pb-0 p-4 shadow-lg md:pb-4 w-full"
       >
         <div className="flex gap-2 items-center w-2/3">
           <a
@@ -30,12 +30,15 @@ const NavBar = () => {
             <img
               src="./images/logo sf dg.png"
               alt=""
-              className=" h-full flex object-contain"
+              className=" h-full flex object-contain "
             />
           </a>
-          <h1 className=" text-sm lg:text-xl text-gray-800 font-bold">
-            Visual ABCSP corretora de Seguros
-          </h1>
+          <div className="flex flex-col justify-center items-center ">
+            <h1 className=" text-sm lg:text-xl text-gray-800 font-bold">
+              Visual ABCSP
+            </h1>
+            <h3>corretora de Seguros</h3>
+          </div>
         </div>
         <div className=" hidden  lg:flex items-center ">
           <ul className="flex items-center space-x-6">
